@@ -1,7 +1,7 @@
 SimpleCopy
 ==============
 
-Wrapper per shutil
+Wrapper for shutil
 
 Installation
 ------------

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="SimpleCopy",
-    version="0.0.1",
+    version="0.0.2",
     author="Acuf5928",
     author_email="alberto.cuffaro@hotmail.it",
     description="library to make easier copy files and folders in python",

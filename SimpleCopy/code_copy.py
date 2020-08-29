@@ -1,6 +1,7 @@
 import os
 import shutil
-from glob import glob
+
+from SimpleCopy import code_zip
 
 
 def copy(copyFrom: str, copyTo: str, copyType: bool):
@@ -33,22 +34,7 @@ def copy(copyFrom: str, copyTo: str, copyType: bool):
                 copyTo = destinationPath + namePrefix + " (" + str(n) + ")" + nameExt
 
     if os.path.isdir(copyFrom) and len(copyTo.split(os.sep)[-1].split(".")) != 1:
-        import zipfile
-
-        if copyFrom[-1] != os.sep:
-            copyFrom += os.sep
-
-        # recupero la lista file e cartelle da zippare
-        dirlist = glob(copyFrom + "**", recursive=True)
-
-        # creo il file zip
-        zip_name = zipfile.ZipFile(file=copyTo, mode='w', compression=14)
-
-        # aggiungo i file e cartelle al file zip
-        for file in dirlist:
-            if file != copyTo:
-                zipfile = file.replace(copyFrom, "")
-                zip_name.write(file, zipfile)
+        code_zip.zip(copyFrom, copyTo)
 
     elif os.path.isfile(copyFrom):
         shutil.copy2(copyFrom, copyTo)

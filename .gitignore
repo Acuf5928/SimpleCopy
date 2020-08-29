@@ -6,3 +6,4 @@ build
 dist
 SimpleCopy.egg-info
 .pytest_cache
+test.py
