@@ -4,5 +4,5 @@ __pycache__
 .idea
 build
 dist
-SimpleLanguage.egg-info
+SimpleCopy.egg-info
 .pytest_cache
