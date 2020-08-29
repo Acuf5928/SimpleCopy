@@ -1,0 +1,8 @@
+*.pyc
+__pycache__
+.vscode
+.idea
+build
+dist
+SimpleLanguage.egg-info
+.pytest_cache
